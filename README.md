@@ -1,68 +1,30 @@
-# WebAR Tutorial
+# WebAR chair
 
-This project is a simple guide to help you set up a WebAR experience using [Google's Model Viewer](https://modelviewer.dev/). 
-It includes step-by-step instructions to host your 3D models (GLB for Android and USDZ for iOS) on GitHub Pages.
+AR assignment. A chair you can place in your room from the browser, no app install needed.
 
-You can **[Test this app here]**: (https://gunteralce.github.io/webar-tutorial/)
+Live: https://marinprusac.github.io/webar-tutorial/
 
----
+## Surface-based part
 
-## Features
-- **Cross-platform AR:** Supports Android (GLB) and iOS (USDZ) 3D models.
-- **GitHub Pages Deployment:** Easily host your WebAR experience online.
-- **Customizable Design:** Modify the `index.html` and `style.css` files to personalize your page.
+- Page: `index.html`
+- Uses Google's [model-viewer](https://modelviewer.dev/)
+- When you tap the AR button, the phone opens its own AR viewer (Quick Look on iPhone, Scene Viewer on Android). That viewer finds the floor and you can place, move and rotate the chair.
+- `chair.glb` is used on Android, `chair.usdz` on iPhone
 
----
+## Where stuff comes from
 
-## Prerequisites
-Before starting, make sure you have:
-1. A [GitHub account](https://github.com/). If you don't have one, sign up [here](https://github.com/join).
-2. A 3D model:
-   - GLB format (for Android devices).
-   - USDZ format (for iOS devices).  
-   Download free models from [Poly Pizza](https://polypizza.com/), [Sketchfab](https://sketchfab.com/), or create your own.
+- Forked from [gunterAlce/webar-tutorial](https://github.com/gunterAlce/webar-tutorial) (index.html and style.css)
+- Chair model is SheenChair from [Khronos glTF Sample Assets](https://github.com/KhronosGroup/glTF-Sample-Assets) (CC0)
 
----
+## What I changed
 
+- Replaced the sample models with the chair
+- Made the USDZ version for iPhone in Blender (import glb, export usdz)
+- Pointed `src` and `ios-src` to my repo
+- The loading text never went away in the original, so it now hides when the model loads
+- Added a short hint under the model
+- Removed the old sample models
 
-## Quick Start Guide
+## How to test
 
-### 1. Fork This Repository
-Click the "Fork" button in the top-right corner to create a copy of this repository in your GitHub account.
-
----
-
-### 2. Clone Your Repository
-Clone the forked repository to your local machine:
-```bash
-git clone https://github.com/<your-username>/webar-tutorial.git
-cd webar-tutorial
-
-### 3. Add Your 3D Models
-Upload your GLB and USDZ files into the repository. Replace the file paths in the index.html file with your model's filenames:
-```bash
-src="https://raw.githubusercontent.com/<your-username>/webar-tutorial/main/your-model.glb"
-ios-src="https://raw.githubusercontent.com/<your-username>/webar-tutorial/main/your-model.usdz"
-```
-
----
-
-### 4. Publish with GitHub Pages
-1. Go to Settings in your repository.
-2. Scroll down to GitHub Pages.
-3. Under Branch, select main and click Save.
-4. Your WebAR page will be published at:
-```bash
-https://<your-username>.github.io/webar-tutorial/.
-```
----
-
-### 5. Test Your WebAR
-1. Open the URL on an AR-compatible device.
-2. Tap the AR button to view your model in augmented reality.
-
----
-
-### 6. Customization
-- **Edit Layout:** Modify style.css for a custom design.
-- **Change AR Behavior:** Update the <model-viewer> tag in index.html.
+Open the live link on a phone, tap the AR button and point it at the floor.
