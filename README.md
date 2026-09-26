@@ -15,14 +15,16 @@ Live: https://marinprusac.github.io/webar-tutorial/
 
 - Page: `marker.html` (also linked from the main page)
 - Uses [MindAR](https://github.com/hiukim/mind-ar-js) image tracking with [A-Frame](https://aframe.io/)
-- Point the camera at `card.png` (print it or open it on another screen) and the chair shows up standing on it and spins
+- Marker is the Lund University seal (`lund.png`). Print it or open it on another screen, point the camera at it and the chair shows up standing on it and spins
 - When the marker is found the text at the top changes to "Found it!", and goes back when it's lost
-- `card.mind` is the compiled tracking data for `card.png`
+- `lund.mind` is the compiled tracking data for `lund.png`, made with the MindAR image compiler
 
 ## Where stuff comes from
 
 - Forked from [gunterAlce/webar-tutorial](https://github.com/gunterAlce/webar-tutorial) (index.html and style.css)
-- Marker page is based on the MindAR image tracking example, `card.png` and `card.mind` are from their examples
+- Marker page is based on the MindAR image tracking example
+- Lund University logo from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Logotyp_Lunds_universitet_(vit).png).
+  I cropped out the seal without the text, made it dark blue and made the lines thicker, because the thin gold lines didn't get recognized
 - Chair model is SheenChair from [Khronos glTF Sample Assets](https://github.com/KhronosGroup/glTF-Sample-Assets) (CC0)
 
 ## What I changed
@@ -34,11 +36,11 @@ Live: https://marinprusac.github.io/webar-tutorial/
 - Added a short hint under the model
 - Removed the old sample models
 
-For the marker page I wrote `marker.html` using the example as a starting point: swapped their model for the chair, rotated and scaled it so it stands on the card, added the spinning and the found/lost text. Also removed a rotation tag from `card.png` because it showed up sideways in some viewers.
+For the marker page I wrote `marker.html` using the example as a starting point: swapped their model for the chair, rotated and scaled it so it stands on the marker, added the spinning and the found/lost text. Swapped their example marker for the Lund University seal.
 
 I used WebAR instead of the Unity workshops because I only have an iPhone and no Mac, so I can't build the Unity apps for my phone.
 
 ## How to test
 
 - Surface: open the live link on a phone, tap the AR button and point it at the floor
-- Marker: open https://marinprusac.github.io/webar-tutorial/marker.html, allow the camera and point it at `card.png`
+- Marker: open https://marinprusac.github.io/webar-tutorial/marker.html, allow the camera and point it at `lund.png`

@@ -10,9 +10,9 @@
 </head>
 <body>
 
-    <div id="overlay">Point the camera at the <a href="card.png" style="color: white;">marker image</a></div>
+    <div id="overlay">Point the camera at the <a href="lund.png" style="color: white;">marker image</a></div>
 
-    <a-scene mindar-image="imageTargetSrc: card.mind; uiScanning: no"
+    <a-scene mindar-image="imageTargetSrc: lund.mind; uiScanning: no"
         color-space="sRGB" renderer="colorManagement: true"
         vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
 
@@ -39,7 +39,7 @@
             overlay.textContent = "Found it!";
         });
         target.addEventListener("targetLost", function () {
-            overlay.innerHTML = 'Point the camera at the <a href="card.png" style="color: white;">marker image</a>';
+            overlay.innerHTML = 'Point the camera at the <a href="lund.png" style="color: white;">marker image</a>';
         });
     </script>
 
