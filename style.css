@@ -83,3 +83,42 @@ a-scene {
     color: #333;
     padding: 0 16px;
 }
+
+/* back link on the AR pages */
+#back {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    z-index: 3;
+}
+
+/* start page */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 320px;
+    margin: 60px auto;
+    padding: 0 16px;
+    text-align: center;
+}
+
+.menu .button {
+    display: block;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.menu p {
+    color: #555;
+    margin: 0 0 8px;
+}

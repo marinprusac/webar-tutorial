@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAR chair (surface)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include the model-viewer library -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <!-- Loading message -->
+    <div id="loadingMessage">Loading AR experience, please wait...</div>
+
+    <!-- 3D Model Viewer -->
+    <model-viewer id="arViewer"
+        src="https://raw.githubusercontent.com/marinprusac/webar-tutorial/main/chair.glb"
+        ios-src="https://raw.githubusercontent.com/marinprusac/webar-tutorial/main/chair.usdz"
+        alt="Chair"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        camera-controls
+        auto-rotate
+        style="width: 100%; height: 500px;">
+    </model-viewer>
+
+    <p id="hint">Tap the AR button and point your phone at the floor to place the chair.</p>
+    <a id="back" href="index.html">Back</a>
+
+    <script>
+        // hide loading text when model is loaded
+        document.getElementById("arViewer").addEventListener("load", function () {
+            document.getElementById("loadingMessage").style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
